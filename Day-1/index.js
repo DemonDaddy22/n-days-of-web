@@ -1,11 +1,19 @@
 (function () {
-  const containerDropdowns = document.querySelector('.flex-container-controls').querySelectorAll('select');
-  const containerInputs = document.querySelector('.flex-container-controls').querySelectorAll('input');
-  const itemDropdowns = document.querySelector('.flex-item-controls').querySelectorAll('select');
-  const itemInputs = document.querySelector('.flex-item-controls').querySelectorAll('input');
+  const containerDropdowns = document
+    .querySelector(".flex-container-controls")
+    .querySelectorAll("select");
+  const containerInputs = document
+    .querySelector(".flex-container-controls")
+    .querySelectorAll("input");
+  const itemDropdowns = document
+    .querySelector(".flex-item-controls")
+    .querySelectorAll("select");
+  const itemInputs = document
+    .querySelector(".flex-item-controls")
+    .querySelectorAll("input");
 
-  const flexContainer = document.querySelector('.flex-container');
-  const flexItems = document.querySelectorAll('.flex-item');
+  const flexContainer = document.querySelector(".flex-container");
+  const flexItems = document.querySelectorAll(".flex-item");
 
   let activeItemIndex = 0;
 
@@ -15,7 +23,7 @@
 
     if (property && value) {
       switch (property) {
-        case 'gap':
+        case "gap":
           flexContainer.style[property] = `${value}rem`;
           break;
         default:
@@ -31,7 +39,7 @@
 
     if (property && value) {
       switch (property) {
-        case 'flex-basis':
+        case "flex-basis":
           flexItems[activeItemIndex].style[property] = `${value}px`;
           break;
         default:
@@ -45,9 +53,19 @@
     activeItemIndex = index;
   };
 
-  containerDropdowns.forEach((dropdown) => dropdown.addEventListener('change', handleContainerControlOptionChange));
-  containerInputs.forEach((input) => input.addEventListener('change', handleContainerControlOptionChange));
-  itemDropdowns.forEach((dropdown) => dropdown.addEventListener('change', handleItemControlOptionChange));
-  itemInputs.forEach((input) => input.addEventListener('change', handleItemControlOptionChange));
-  flexItems.forEach((item, index) => item.addEventListener('click', () => handleItemClick(index)));
-})()
+  containerDropdowns.forEach((dropdown) =>
+    dropdown.addEventListener("change", handleContainerControlOptionChange),
+  );
+  containerInputs.forEach((input) =>
+    input.addEventListener("change", handleContainerControlOptionChange),
+  );
+  itemDropdowns.forEach((dropdown) =>
+    dropdown.addEventListener("change", handleItemControlOptionChange),
+  );
+  itemInputs.forEach((input) =>
+    input.addEventListener("change", handleItemControlOptionChange),
+  );
+  flexItems.forEach((item, index) =>
+    item.addEventListener("click", () => handleItemClick(index)),
+  );
+})();
