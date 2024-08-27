@@ -1,0 +1,117 @@
+<!-- TODO - create a sandbox for testing flexbox -->
+<!-- TODO - add dropdowns for direction, alignment, wrapping for flex container -->
+<!-- TODO - add dropdowns for sizing, positioning, ordering for flex items -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <main>
+      <section class="controls flex-container-controls">
+        <h3>Flex Container Controls</h3>
+        <div class="divider"></div>
+        <div class="controls-row">
+          <div class="controls-group">
+            <label for="flex-direction">Flex Direction</label>
+            <select id="flex-direction">
+              <option>row</option>
+              <option>row-reverse</option>
+              <option>column</option>
+              <option>column-reverse</option>
+            </select>
+          </div>
+          <div class="controls-group">
+            <label for="align-items">Align Items</label>
+            <select id="align-items">
+              <option>start</option>
+              <option>end</option>
+              <option>flex-start</option>
+              <option>flex-end</option>
+              <option>center</option>
+              <option>stretch</option>
+              <option>baseline</option>
+            </select>
+          </div>
+          <div class="controls-group">
+            <label for="justify-content">Justify Content</label>
+            <select id="justify-content">
+              <option>start</option>
+              <option>end</option>
+              <option>flex-start</option>
+              <option>flex-end</option>
+              <option>center</option>
+              <option>stretch</option>
+              <option>left</option>
+              <option>right</option>
+              <option>space-between</option>
+              <option>space-around</option>
+              <option>space-evenly</option>
+            </select>
+          </div>
+          <div class="controls-group">
+            <label for="flex-wrap">Flex Wrap</label>
+            <select id="flex-wrap">
+              <option>nowrap</option>
+              <option>wrap</option>
+              <option>wrap-reverse</option>
+            </select>
+          </div>
+          <div class="controls-group">
+            <label for="gap">Gap</label>
+            <input id="gap" type="number" min="0" value="0" />
+          </div>
+        </div>
+      </section>
+      <section class="controls flex-item-controls">
+        <h3>Flex Item Controls</h3>
+        <p>Select a flex item for item specific controls</p>
+        <div class="divider"></div>
+        <div class="controls-row">
+          <div class="controls-group">
+            <label for="flex-grow">Flex Grow</label>
+            <input id="flex-grow" type="number" min="0" value="0" />
+          </div>
+          <div class="controls-group">
+            <label for="flex-shrink">Flex Shrink</label>
+            <input id="flex-shrink" type="number" min="0" value="1" />
+          </div>
+          <div class="controls-group">
+            <label for="flex-basis">Flex Basis</label>
+            <input id="flex-basis" type="number" min="0" value="0" />
+          </div>
+          <div class="controls-group">
+            <label for="align-self">Align Self</label>
+            <select id="align-self">
+              <option>start</option>
+              <option>end</option>
+              <option>flex-start</option>
+              <option>flex-end</option>
+              <option>center</option>
+              <option>stretch</option>
+              <option>baseline</option>
+            </select>
+          </div>
+          <div class="controls-group">
+            <label for="order">Order</label>
+            <select id="order">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+          </div>
+        </div>
+      </section>
+      <section class="flex-container">
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+      </section>
+    </main>
+    <script src="./index.js" type="text/javascript"></script>
+  </body>
+</html>
