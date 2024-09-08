@@ -19,12 +19,14 @@ For more info, refer to the [localStorage documentation](https://developer.mozil
 eg.
 
 ```javascript
-window.addEventListener('storage', e => {
-  document.querySelector('.my-key').textContent = e.key;
-  document.querySelector('.my-old').textContent = e.oldValue;
-  document.querySelector('.my-new').textContent = e.newValue;
-  document.querySelector('.my-url').textContent = e.url;
-  document.querySelector('.my-storage').textContent = JSON.stringify(e.storageArea);
+window.addEventListener("storage", (e) => {
+  document.querySelector(".my-key").textContent = e.key;
+  document.querySelector(".my-old").textContent = e.oldValue;
+  document.querySelector(".my-new").textContent = e.newValue;
+  document.querySelector(".my-url").textContent = e.url;
+  document.querySelector(".my-storage").textContent = JSON.stringify(
+    e.storageArea,
+  );
 });
 ```
 
