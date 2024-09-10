@@ -32,8 +32,8 @@
   setCurrentTheme();
   button.addEventListener("click", toggleTheme);
 
-  window.addEventListener("storage", e => {
-    if (e.key === 'wb-theme') {
+  window.addEventListener("storage", (e) => {
+    if (e.key === "wb-theme") {
       setCurrentTheme();
     }
   });
